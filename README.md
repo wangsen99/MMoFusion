@@ -21,6 +21,8 @@ Please visit our [**webpage**](https://mmofusion.github.io/) for more details.
 ## 1. Setup environment
 ```shell
 conda create -n mmofusion python=3.7
+conda activate mmofusion
+
 pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 pip install -r requirements.txt
 ```

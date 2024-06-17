@@ -115,11 +115,8 @@ class PoseDecoderConv(nn.Module):
         if self.use_pre_poses:
             pre_pose_feat = self.pre_pose_net(pre_poses.reshape(pre_poses.shape[0], -1))
             feat = torch.cat((pre_pose_feat, feat), dim=1)
-        #print(feat.shape)
         out = self.pre_net(feat)
-        # print(out.shape)
         out = out.view(feat.shape[0], self.decoder_size, -1)
-        #print(out.shape)
         out = self.net(out)
         out = out.transpose(1, 2)
         return out
