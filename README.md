@@ -29,7 +29,7 @@ Download the [BEAT](https://github.com/PantoMatrix/PantoMatrix/blob/main/scripts
 
 We preprocess the data based on the [DiffuseStyleGesture](https://github.com/YoungSeng/DiffuseStyleGesture), thanks for their great work!
 
-Download the audio prepocess model [WavLM-Large.pt]((https://github.com/microsoft/unilm/tree/master/wavlm)) and text prepocess model [crawl-300d-2M.vec](https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip).
+Download the audio prepocess model [WavLM-Large]((https://github.com/microsoft/unilm/tree/master/wavlm)) and text prepocess model [crawl-300d-2M](https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip).
 
 ```shell
 cd ./process/
