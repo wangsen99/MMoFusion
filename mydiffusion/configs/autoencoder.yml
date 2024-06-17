@@ -1,0 +1,50 @@
+# path
+root_path: ../..
+out_root_path: /outputs/audio2pose/  
+version: "v0" 
+
+# model 
+motion_dim: 684     # 684/1141
+pose_dims: 684 
+style_dim: 4
+n_poses: 150
+pose_length: 150
+vae_length: 300
+hidden_size: 128
+g_name: EmbeddingNet 
+model: motion_autoencoder
+name: autoencoder
+
+# logging
+log_period: 100 # its
+
+
+# training
+trainer: ae
+num_workers: 8
+batch_size: 648
+variational_encoding: False
+rec_weight: 1
+vel_weight: 0.1
+kld_weight: 0
+lr_base: 0.00012 
+grad_norm: 0
+max_num_steps: 600000
+save_period: 30000 # step
+
+opt: adam
+weight_decay: 0.
+lr_min: 1e-7
+warmup_lr: 5e-4
+warmup_epochs: 0
+decay_epochs: 9999
+decay_rate: 0.
+lr_policy: step
+momentum: 0.8
+opt_betas: [0.5, 0.999]
+
+# device
+random_seed: 12345
+deterministic: True
+benchmark: True
+cudnn_enabled: True

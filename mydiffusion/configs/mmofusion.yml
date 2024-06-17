@@ -1,0 +1,65 @@
+# v0: xyz, v1: ZEGGS by yongkang, v1: ZEGGS by yongkang bugfix
+
+n_poses: 300
+motion_resampling_framerate: 30     # 20 -> 60
+motion_dim: 684     # 684/1141
+body: upper
+njoints: 558    # 684 - 14 * 9 =  558
+latent_dim: 384   # 256 -> 512, 384
+n_seed: 30
+stride: 270
+cond_mask_prob: 0.1
+speaker_num: 30
+speaker_dim: 32
+emo_num: 8
+emo_dim: 12
+audio_feature_dim: 1434   # 1133 + 301; audio_f + text_f
+audio_feat_dim_latent: 96   # 64 -> 128, 96
+ff_size: 1024
+num_heads: 8
+audio_layers: 2
+encoder_layers: 4
+num_layers: 6
+
+# train setting
+lambda_vel: 0.1
+lambda_acc: 0.01
+lambda_angle: 0.0
+random_seed: 12345
+num_workers: 4
+batch_size: 15
+log_interval: 50
+weight_decay: 0.0
+start_anneal_steps: 120000
+lr_anneal_steps: 0
+cond_mode: ''
+# save_dir: "./BEAT_mmofusion"
+audio_feat: "wavlm"
+max_num_steps: 120000
+save_iters: 5000
+lr: 0.0001
+betas: [0.5, 0.999]
+milestones: [100, 200]
+gamma: 0.1
+
+# path
+h5file: ""   # train data path
+name: "mmofusion"
+version: "v0"
+suffix: ""
+tst_path: "/path/to/BEAT/processed/"    #  test data path
+out_root_path: /outputs/
+root_path: ".."
+resume_checkpoint: ''
+
+# test 
+guidance_param: 3
+motion_dim: 684
+pose_dims: 684
+pose_length: 150
+vae_length: 300
+randm_num: 500
+model_path: ""                    # pretrained model
+eval_model: motion_autoencoder
+e_name: HalfEmbeddingNet
+e_path: ""                        # pretrained autoencoder model for FGD
