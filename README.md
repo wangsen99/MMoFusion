@@ -47,7 +47,7 @@ and get the mean, std in `./process/` by running:
 ```shell
 python calculate_gesture_statistics.py --dataset BEAT --version "v0"
 ```
-# 3. Test
+## 3. Test
 Download our pretrained [models](https://drive.google.com/drive/folders/1-XyiBgL-oWmv9mTi4AlTw2M_BbGgUJTR) including motion generation with upper body and whole body.
 
 You can also find the pretrained autoencoder model `last_600000.bin`, which we trained it on 30 speakers data.
@@ -63,7 +63,7 @@ python sample_linear.py --config=./configs/mmofusion_whole.yml --gpu 0
 
 You can also modify the weight `guidance_param` since we use the classifier-free guidance during training.
 
-# 4. Train
+## 4. Train
 Edit the `h5file` in the config to load the H5file `BEAT_v0_train.h5`.
 ```shell
 for upper body
