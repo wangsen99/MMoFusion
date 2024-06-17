@@ -73,3 +73,16 @@ for whole body
 ...
 ```
 
+## Citation
+If you find this repo useful for your research, please consider citing our paper:
+```
+@misc{wang2024mmofusion,
+      title={MMoFusion: Multi-modal Co-Speech Motion Generation with Diffusion Model}, 
+      author={Sen Wang and Jiangning Zhang and Weijian Cao and Xiaobin Hu and Moran Li and Xiaozhong Ji and Xin Tan and Mengtian Li and Zhifeng Xie and Chengjie Wang and Lizhuang Ma},
+      year={2024},
+      eprint={2403.02905},
+      archivePrefix={arXiv},
+      primaryClass={id='cs.MM' full_name='Multimedia' is_active=True alt_name=None in_archive='cs' is_general=False description='Roughly includes material in ACM Subject Class H.5.1.'}
+}
+```
+
